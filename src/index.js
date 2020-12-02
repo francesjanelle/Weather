@@ -39,7 +39,3 @@ let now = document.querySelector(".now")
     now.innerHTML = `${today}, ${month} ${currentDate}, ${year}`
 
 // API Beginning
-
-
-let form = document.querySelector('#searching')
-form.addEventListener("submit", locateSearch)
