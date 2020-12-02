@@ -2,7 +2,7 @@ body {
   max-width: 800px;
   margin: 10px auto;
   padding: 0 auto;
-
+  color: #000000;
   font-family: Arial, Helvetica, sans-serif;
 }
 .mainContainer {
@@ -36,7 +36,16 @@ ul {
   list-style-type: none;
   text-decoration: none;
 }
+.precip {
+  color: #000000;
+}
+.humid {
+  color: #000000;
+}
 
+.wind {
+  color: #000000;
+}
 .btmContainer {
   text-align: center;
   margin: 10px;
