@@ -15,6 +15,31 @@ let days = [
 
 let today = days[currentDay.getDay()];
 
+let year = currentDay.getFullYear();
+//alert(year);
+
+let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+]
+
+let month = months[currentDay.getMonth()];
+//alert(month)
+//alert(`Today is ${today}. ${month} ${currentDate}, ${year}`)
+
+function formatDate(newDate) { 
+    
+}
 
 const apiKey = "deb4d0036edfa966c7a36750fd024ceb"
 let city = "Denver"
