@@ -9,112 +9,30 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-
-    <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="topcontent">
-              <div id="heading">
-                <h2 class="city">Denver, Colorado</h2>
-                <h3 class="date">Dec 01, 2020</h3>
-              </div>
-            </div>
-        </div>
-      </div>
-    <hr>
-        <div class="temparature">
-            <div class="container">
-                <div class="row">
-                  <div class="col">
-                      <div class="interactBtn">
-                        <h3 class="current">
-                             <img src="img/cloud.png" alt="cloud" width="50px">
-                                30°
-                        </h3>
-                                <a href="fahremheit" 
-                                class="fahrenheit"> °F</a> | 
-                                <a href="celcius" 
-                                class="celcius"> °C</a>
-                            </div> <!--end div interactBtn-->
-
-                        <div class="interactType">
-
-                            <form id="searching">
-                                <input type="text"
-                                placeholder="Location"
-                                autocomplete="off" 
-                                id="search-location">
-
-                                <br>
-
-                                <button 
-                                    type="button" 
-                                    class="btn btn-primary" 
-                                    id="blueSearch">
-                                        Search
-                                 </button>
-
-                                <button 
-                                    type="button" 
-                                    class="btn btn-success" 
-                                    id="greenCurrent">
-                                    Current Location
-                                </button>
-                            </form>
-                        </div>  <!--end of interactType-->
-
-                    </div>
-                <div class="col">
-                    <ul class="list">
-                      <li>
-                         🌧 Precipitation:
-                      </li>
-                      <li>
-                         💧 Humidity:
-                      </li>
-                      <li>
-                         🌬  Wind:
-                      </li>
-                  </ul>
-                    
-                  </div>
-                </div>
-
-            </div> <!--end div of temperature-->
-     </div> <!--end div of topcontent-->
-    <hr>
-     <div class="btmcontent">
-        <div class="container">
+    <div class="mainContainer">
+      <div class="topContainer">
+        <div id="header">
+          <h1>Denver, Colorado</h1>
+          <h3>Dec 01, 2020</h3>
+        </div> <!--end of div #header-->
+        <hr>
+        <div id="weatherInfo">
+          <div class="container">
             <div class="row">
               <div class="col">
-                <h4>Wed</h4>
-                <h5>20°</h5>
+                1 of 2
               </div>
               <div class="col">
-                <h4>Thur</h4>
-                <h5>20°</h5>
+                2 of 2
               </div>
-              <div class="col">
-                <h4>Fri</h4>
-                <h5>20°</h5>
-              </div>
-              <div class="col">
-                <h4>Sat</h4>
-                <h5>20°</h5>
-              </div>
-              <div class="col">
-                <h4>Sun</h4>
-                <h5>20°</h5>
-              </div>
-            </div> <!--end div row-->
-        </div> <!--end div container-->
-     </div> <!--end div btmcontent-->
-<hr>
-     <p class="myName">
-        <small>
-         coded by <a href="https://github.com/francesjanelle">Frances-Janelle Torres</a> 
-        </small>
-    </p>
-<script src="src/index.js"></script>
+            </div>
+        </div> <!--end of div #weatherInfo-->
+      </div> <!--.topContainer-->
+    </div> <!--end of div .mainContainer-->
+  
+    <span><small>
+      coded by <a href="https://github.com/francesjanelle" target="_blank">Frances-Janelle Torres
+    </small></span>
+  <script src="src/index.js"></script>
 </body>
 </html>
