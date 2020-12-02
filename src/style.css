@@ -55,3 +55,7 @@ span {
 span a {
     color: lightgrey
 }
+
+span a:hover {
+    color: magenta
+}
