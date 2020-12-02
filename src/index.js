@@ -46,9 +46,9 @@ function showWeather(response) {
 }
 
 function searchBox(city, locateSearch) {
-let apiKey = "deb4d0036edfa966c7a36750fd024ceb"
-let apiUrl = `https://api.openweathermap.org/data/2.5/find?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(showWeather)
+    let apiKey = "deb4d0036edfa966c7a36750fd024ceb"
+    let apiUrl = `https://api.openweathermap.org/data/2.5/find?q=${city}&appid=${apiKey}&units=metric`; 
+    axios.get(apiUrl).then(showWeather)
 }
 
 function locateSearch(event) { 
