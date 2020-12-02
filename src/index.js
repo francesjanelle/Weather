@@ -40,21 +40,22 @@ let now = document.querySelector(".now")
 
 // API Beginning
 
-function displayWeather(response) { 
-    let h3City = document.querySelector(".city").value;
-// document.querySelector(".city").innerHTML = response.data.name;
-    document.querySelector(".nowTemp").innerHTML = response.data.main.temp;
+function showWeather(response) { 
+    document.querySelector("#city").innerHTML = response.data.name;
+    document.quertSelector("#nowTemp").innnerHTML = Math.round(response.data.main.temp);
 }
 
-function searchBox(event)
-{
-    event.preventDefault();
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${metric}`
-    const apiKey = "deb4d0036edfa966c7a36750fd024ceb"
-    let city = document.querySelector("#searchLocation").value
-    const metric = "metric"
+function searchBox(city, locateSearch) {
+let apiKey = "deb4d0036edfa966c7a36750fd024ceb"
+let apiUrl = `https://api.openweathermap.org/data/2.5/find?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(showWeather)
+}
 
-    axios.get(apiUrl).then(displayWeather)
-    
-}   
-// const fahrenheit = "fahrenheit"
+function locateSearch(event) { 
+    event.preventDefault();
+    let city = document.querySelector("#searchLocation").value;
+  
+}
+
+let form = document.querySelector('#searching')
+form.addEventListener("submit", locateSearch)
