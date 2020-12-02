@@ -37,9 +37,8 @@ let month = months[currentDay.getMonth()];
 //alert(month)
 //alert(`Today is ${today}. ${month} ${currentDate}, ${year}`)
 
-function formatDate(newDate) { 
-    
-}
+let now = document.querySelector(".now")
+    now.innerHTML = `${month} ${currentDate}, ${year}`
 
 const apiKey = "deb4d0036edfa966c7a36750fd024ceb"
 let city = "Denver"
