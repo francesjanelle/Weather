@@ -14,8 +14,8 @@
         <div class="row">
           <div class="col">
             <div class="topcontent">
-                <h2>Denver, Colorado</h2>
-                <h3>Dec 01, 2020</h3>
+                <h2 class="city">Denver, Colorado</h2>
+                <h3 class="date">Dec 01, 2020</h3>
             </div>
         </div>
       </div>
@@ -24,33 +24,44 @@
             <div class="container">
                 <div class="row">
                   <div class="col">
+                      <div class="interactBtn">
                         <h3 class="current">
                              <img src="img/cloud.png" alt="cloud" width="50px">
                                 temperature
                         </h3>
-                        <form id="searching">
-                            <input type="text"
-                            placeholder="Location"
-                            autocomplete="off" 
-                            id="search-location">
+                                <a href="fahremheit" 
+                                class="fahrenheit"> °F</a> | 
+                                <a href="celcius" 
+                                class="celcius"> °C</a>
+                            </div> <!--end div interactBtn-->
 
-                            <br>
+                        <div class="interactType">
 
-                            <button 
-                                type="button" 
-                                class="btn btn-primary" 
-                                id="blueSearch">
-                                    Search
-                            </button>
+                            <form id="searching">
+                                <input type="text"
+                                placeholder="Location"
+                                autocomplete="off" 
+                                id="search-location">
 
-                            <button 
-                                type="button" 
-                                class="btn btn-success" 
-                                id="greenCurrent">
+                                <br>
+
+                                <button 
+                                    type="button" 
+                                    class="btn btn-primary" 
+                                    id="blueSearch">
+                                        Search
+                                 </button>
+
+                                <button 
+                                    type="button" 
+                                    class="btn btn-success" 
+                                    id="greenCurrent">
                                     Current Location
                                 </button>
-                        </form>
-                </div>
+                            </form>
+                        </div>  <!--end of interactType-->
+                        
+                    </div>
                 <div class="col">
                     <ul class="list">
                       <li>
@@ -75,23 +86,32 @@
             <div class="row">
               <div class="col">
                 <h4>Wed</h4>
+                <h5>20°</h5>
               </div>
               <div class="col">
                 <h4>Thur</h4>
+                <h5>20°</h5>
               </div>
               <div class="col">
                 <h4>Fri</h4>
+                <h5>20°</h5>
               </div>
               <div class="col">
                 <h4>Sat</h4>
+                <h5>20°</h5>
               </div>
               <div class="col">
                 <h4>Sun</h4>
+                <h5>20°</h5>
               </div>
             </div> <!--end div row-->
         </div> <!--end div container-->
      </div> <!--end div btmcontent-->
-
+<hr>
+<br>
+     <p>
+         coded by <a href="https://github.com/francesjanelle">Frances-Janelle Torres</a>
+    </p>
 <script src="src/index.js"></script>
 </body>
 </html>
