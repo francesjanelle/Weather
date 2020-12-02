@@ -10,6 +10,10 @@ body {
     border-radius: 10px;
 }
 
+#weatherInfo {
+    margin-left: 10px;
+}
+
 hr {
     margin-left: 5px;
     margin-right: 5px;

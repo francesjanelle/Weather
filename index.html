@@ -17,14 +17,34 @@
         </div> <!--end of div #header-->
         <hr>
         <div id="weatherInfo">
-          <div class="container">
             <div class="row">
-              <div class="col">
-                1 of 2
-              </div>
-              <div class="col">
-                2 of 2
-              </div>
+              <div class="col"> <!--start of 1st col-->
+                <h3>20</h3>
+                <small> 
+                  <a 
+                  href="celsius" 
+                  id="celsius"> °C </a> | 
+                  <a 
+                  href="fahrenheit" 
+                  id="fahrenheit"> °F
+                </a>
+                </small>
+                <form id="searching" >
+                  <input type="text"
+                  placeholder="Location"
+                  autocomplete="off" 
+                  id="searchLocation"/>
+                  <br>
+                  
+                </form>
+              </div> <!--end of 1st col-->
+              <div class="col"> <!--start of 2md col--> 
+                <ul class="list">
+                  <li>Precipitation: 0</li>
+                  <li>Humidity: 0</li>
+                  <li>Wind: 0</li>
+                </ul>
+              </div> <!--end of 2nd col-->
             </div>
         </div> <!--end of div #weatherInfo-->
       </div> <!--.topContainer-->
