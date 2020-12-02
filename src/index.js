@@ -38,4 +38,24 @@ let month = months[currentDay.getMonth()];
 let now = document.querySelector(".now")
     now.innerHTML = `${today}, ${month} ${currentDate}, ${year}`
 
-// API Beginning
+///
+
+function nowCelsius(event) {
+    event.preventDefault();
+
+    let celTemp = document.querySelector("#nowTemp")
+    celTemp.innerHTML = `This is in Celsius`
+}
+
+let celsiusIcon = document.querySelector("#celsius")
+celsiusIcon.addEventListener("click", nowCelsius)
+
+function nowFahren(event) {
+    event.preventDefault();
+
+    let fahrTemp = document.querySelector("#nowTemp")
+    fahrTemp.innerHTML = `This is in Fahrenheit.`
+}
+
+let fahrenIcon = document.querySelector("#fahrenheit")
+fahrenIcon.addEventListener("click", nowFahren)
