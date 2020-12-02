@@ -30,12 +30,24 @@
                 </a>
                 </small>
                 <form id="searching" >
-                  <input type="text"
-                  placeholder="Location"
-                  autocomplete="off" 
-                  id="searchLocation"/>
-                  <br>
-                  
+                    <input 
+                      type="text"
+                      placeholder="Location"
+                      autocomplete="off" 
+                      id="searchLocation"/>
+                    <br>
+                    <button 
+                      class="btn btn-primary" 
+                      type="submit" 
+                      id="blueSearch">
+                        Search
+                    </button>
+                    <button 
+                      type="button" 
+                      class="btn btn-success" 
+                      id="greenLocation">
+                        Current Location
+                    </button>
                 </form>
               </div> <!--end of 1st col-->
               <div class="col"> <!--start of 2md col--> 
@@ -48,6 +60,10 @@
             </div>
         </div> <!--end of div #weatherInfo-->
       </div> <!--.topContainer-->
+      <hr>
+      <div class="btmContainer">
+
+      </div> <!--end of .btmContainer-->
     </div> <!--end of div .mainContainer-->
   
     <span><small>
