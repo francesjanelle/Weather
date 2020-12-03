@@ -1,6 +1,6 @@
 // Date Beginning
 
-let currentDay = new Date();
+/*let currentDay = new Date();
 
 let currentDate = currentDay.getDate();
 
@@ -36,9 +36,59 @@ let months = [
 let month = months[currentDay.getMonth()];
 
 let now = document.querySelector(".now")
-    now.innerHTML = `${today}, ${month} ${currentDate}, ${year}`
+    now.innerHTML = `${today}, ${month} ${currentDate}, ${year}` */
 
 ///
+
+function formatDate(timestamp) { 
+    let dateNow = new Date(timestamp) 
+    let hour = dateNow.getHours();
+    
+    if (hour < 10) { 
+        hour = `0${hour}`
+    }
+    
+    let minute = dateNow.getMinutes();
+
+    if (minute < 10) { 
+        minute = `0${minutes}`
+    }
+
+    let days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+    ]
+    let day = days[dateNow.getDay()];
+
+    let months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "June",
+        "July",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+    ]
+
+    let month = months[dateNow.getMonth()]
+    let date = dateNow.getDate()
+    
+    if (date < 10) { 
+        date = `0${date}`
+    }
+
+    return `${month} ${date}, ${day}, ${hour}:${minute}`
+}
 
 function showTemp(response) { 
     console.log(response.data);
@@ -47,11 +97,13 @@ function showTemp(response) {
     let description = document.querySelector("#description")
     let humidity = document.querySelector("#humid")
     let wind = document.querySelector("#wind")
+    let nowDate = document.querySelector(".now")
     temperature.innerHTML = Math.round(response.data.main.temp);
     searchCity.innerHTML = response.data.name;
     description.innerHTML = response.data.weather[0].description; 
     humidity.innerHTML = response.data.main.humidity + "%";
     wind.innerHTML = Math.round(response.data.wind.speed) + " Km/h";
+    nowDate.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
