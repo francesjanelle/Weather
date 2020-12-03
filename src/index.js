@@ -45,9 +45,13 @@ function showTemp(response) {
     let temperature = document.querySelector("#nowTemp")
     let searchCity = document.querySelector("#city")
     let description = document.querySelector("#description")
+    let humidity = document.querySelector("#humid")
+    let wind = document.querySelector("#wind")
     temperature.innerHTML = Math.round(response.data.main.temp);
     searchCity.innerHTML = response.data.name;
     description.innerHTML = response.data.weather[0].description; 
+    humidity.innerHTML = response.data.main.humidity + "%";
+    wind.innerHTML = Math.round(response.data.wind.speed) + " Km/h";
 }
 
 // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";

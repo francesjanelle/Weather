@@ -43,14 +43,12 @@ ul {
   list-style-type: none;
   text-decoration: none;
 }
-.precip {
-  color: #000000;
-}
-.humid {
+
+#humid {
   color: #000000;
 }
 
-.wind {
+#wind {
   color: #000000;
 }
 .btmContainer {
