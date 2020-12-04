@@ -112,7 +112,7 @@ function showTemp(response) {
     icon.setAttribute("alt", response.data.weather[0].description);
 }
 
-function searchBox(city) {
+function search(city) {
 
     // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
     // let city = "Denver"
@@ -126,12 +126,13 @@ function searchProcess(event) {
     event.preventDefault();
     
     let searchCity = document.querySelector("#search-location")
-    console.log(searchCity.value)
     search(searchCity.value);
+    console.log(searchCity.value)
+    
 }
 
 
-searchBox("Denver")
+search("Denver")
 
 ///
 
