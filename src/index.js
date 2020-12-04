@@ -1,6 +1,7 @@
 
 function formatDate(timestamp) { 
-    let dateNow = new Date(timestamp) 
+    let dateNow = new Date(timestamp)
+
     let hour = dateNow.getHours();
     
     if (hour < 10) { 
@@ -101,7 +102,7 @@ function searchProcess(event) {
 function currentLocation(position) { 
     
     // Problem here
-    /*ncaught TypeError: Cannot read property 'latitude' of undefined
+    /*uncaught TypeError: Cannot read property 'latitude' of undefined
     at HTMLButtonElement.currentLocation (index.js:100) */
     let lat = Math.round(position.coords.latitude);
     let lon = Math.round(position.coords.longitude);
