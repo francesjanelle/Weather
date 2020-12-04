@@ -60,8 +60,10 @@ function showTemp(response) {
     let wind = document.querySelector("#wind")
     let nowDate = document.querySelector(".now")
     let icon = document.querySelector("#icon")
+
+    celsiusTemp = response.data.main.temp
     
-    temperature.innerHTML = Math.round(response.data.main.temp);
+    temperature.innerHTML = `${Math.round(celsiusTemp)}°C`;
     searchCity.innerHTML = response.data.name;
     description.innerHTML = response.data.weather[0].description; 
     humidity.innerHTML = response.data.main.humidity + "%";
@@ -91,9 +93,10 @@ function searchProcess(event) {
 }
 
 
-search("Denver")
 
 ///
+
+let celsiusTemp = null;
 
 let form = document.querySelector("#searching")
 form.addEventListener("submit", searchProcess)
@@ -102,9 +105,10 @@ form.addEventListener("submit", searchProcess)
 
 function nowCelsius(event) {
     event.preventDefault();
+    // (32°F − 32) * 5/9 = 0°C
     
     let celTemp = document.querySelector("#nowTemp")
-    celTemp.innerHTML = `This is in Celsius`
+    celTemp.innerHTML = `${Math.round(celsiusTemp)}°C`;
 }
 
 let celsiusIcon = document.querySelector("#celsius")
@@ -112,13 +116,18 @@ celsiusIcon.addEventListener("click", nowCelsius)
 
 function nowFahren(event) {
     event.preventDefault();
+    // (0°C * 9/5) + 32 = 32°F
     
     let fahrTemp = document.querySelector("#nowTemp")
-    fahrTemp.innerHTML = `This is in Fahrenheit.`
+    let fahrValue = (celsiusTemp * (9/5)) + 32
+    fahrTemp.innerHTML = `${Math.round(fahrValue)}°F`;
 }
 
 let fahrenIcon = document.querySelector("#fahrenheit")
 fahrenIcon.addEventListener("click", nowFahren)
+
+search("Denver")
+
 
 // Date Beginning
 
