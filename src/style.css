@@ -35,6 +35,7 @@ body:first-letter {
 .active {
   color: #000000;
   cursor: default;
+  font-weight: bold;
 }
 
 .active:hover {
