@@ -97,6 +97,9 @@ function searchProcess(event) {
 
 function currentLocation(position) { 
     
+    // Problem here
+    /*ncaught TypeError: Cannot read property 'latitude' of undefined
+    at HTMLButtonElement.currentLocation (index.js:100) */
     let lat = Math.round(position.coords.latitude);
     let lon = Math.round(position.coords.longitude);
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
