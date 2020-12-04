@@ -53,6 +53,7 @@ function formatDate(timestamp) {
 function showTemp(response) { 
     
     console.log(response.data);
+    console.log(response.data)
     let temperature = document.querySelector("#nowTemp")
     let searchCity = document.querySelector("#city")
     let description = document.querySelector("#description")
@@ -81,9 +82,11 @@ function search(city) {
     
     axios.get(apiUrl).then(showTemp);
     
-    apiUrl = `https://api.openweathermap.org/data/2.5/onecall?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+    apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
 
     axios.get(apiUrl).then(showTemp);
+
+    console.log(apiUrl)
 }
 
 function searchProcess(event) {
