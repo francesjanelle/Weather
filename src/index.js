@@ -127,7 +127,7 @@ function searchProcess(event) {
     
     let searchCity = document.querySelector("#search-location")
     console.log(searchCity.value)
-    searchCity(searchCity.value);
+    search(searchCity.value);
 }
 
 
