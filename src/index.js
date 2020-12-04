@@ -97,7 +97,7 @@ function showTemp(response) {
     let description = document.querySelector("#description")
     let humidity = document.querySelector("#humid")
     let wind = document.querySelector("#wind")
-    let nowDate = document.querySelector(".now")
+    let nowDate = document.querySelector("#now")
     temperature.innerHTML = Math.round(response.data.main.temp);
     searchCity.innerHTML = response.data.name;
     description.innerHTML = response.data.weather[0].description; 
