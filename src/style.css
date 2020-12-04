@@ -57,6 +57,10 @@ ul {
   font-weight: bold;
 }
 
+.degree {
+  font-weight: bold;
+}
+
 .list {
   list-style-type: none;
   text-decoration: none;
