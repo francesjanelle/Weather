@@ -51,7 +51,7 @@ function formatDate(timestamp) {
     let minute = dateNow.getMinutes();
 
     if (minute < 10) { 
-        minute = `0${minutes}`
+        minute = `0${minute}`
     }
 
     /* let days = [
@@ -108,6 +108,7 @@ function showTemp(response) {
     wind.innerHTML = Math.round(response.data.wind.speed) + " Km/h";
     nowDate.innerHTML = formatDate(response.data.dt * 1000);
     icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
+    icon.setAttribute("alt", response.data.weather[0].description);
 }
 
 // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
