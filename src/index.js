@@ -54,7 +54,7 @@ function formatDate(timestamp) {
         minute = `0${minutes}`
     }
 
-    let days = [
+    /* let days = [
         "Sunday",
         "Monday",
         "Tuesday",
@@ -63,7 +63,7 @@ function formatDate(timestamp) {
         "Friday",
         "Saturday"
     ]
-    let day = days[dateNow.getDay()];
+    let day = days[dateNow.getDay()]; */
 
     let months = [
         "Jan",
@@ -81,13 +81,14 @@ function formatDate(timestamp) {
     ]
 
     let month = months[dateNow.getMonth()]
+
     let date = dateNow.getDate()
     
     if (date < 10) { 
         date = `0${date}`
     }
 
-    return `${month} ${date}, ${day}, ${hour}:${minute}`
+    return `${month} ${date}, ${hour}:${minute}`
 }
 
 function showTemp(response) { 
@@ -97,7 +98,7 @@ function showTemp(response) {
     let description = document.querySelector("#description")
     let humidity = document.querySelector("#humid")
     let wind = document.querySelector("#wind")
-    let nowDate = document.querySelector("#now")
+    let nowDate = document.querySelector(".now")
     temperature.innerHTML = Math.round(response.data.main.temp);
     searchCity.innerHTML = response.data.name;
     description.innerHTML = response.data.weather[0].description; 
@@ -107,7 +108,7 @@ function showTemp(response) {
 }
 
 // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
-let  city = "Denver"
+let city = "Denver"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
 
 axios.get(apiUrl).then(showTemp);
