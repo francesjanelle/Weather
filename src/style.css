@@ -55,6 +55,10 @@ ul {
   padding: 0;
 }
 
+.highTemp {
+  font-weight: bold;
+}
+
 .list {
   list-style-type: none;
   text-decoration: none;

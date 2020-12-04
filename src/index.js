@@ -92,12 +92,30 @@ function searchProcess(event) {
     
 }
 
+function currentLocation(position) { 
+    
+  //  let lat = Math.round(position.coords.latitude);
+  //  let lon = Math.round(position.coords.longitude);
+  //  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${Math.round(position.coords.latitude)}&lon=${Math.round(position.coords.longitude)}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${Math.round(position.coords.latitude)}&lon=${Math.round(position.coords.longitude)
+    }&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+    axios.get(apiUrl).then(showTemp);
+}
+
+ function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(currentLocation)
+}
+
 ///
 
 let celsiusTemp = null;
 
 let form = document.querySelector("#searching")
 form.addEventListener("submit", searchProcess)
+
+let currentButton = document.querySelector("#greenLocation")
+currentButton.addEventListener("click", currentLocation)
 
 /// 
 
