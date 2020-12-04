@@ -92,6 +92,7 @@ function formatDate(timestamp) {
 }
 
 function showTemp(response) { 
+
     console.log(response.data);
     let temperature = document.querySelector("#nowTemp")
     let searchCity = document.querySelector("#city")
@@ -112,7 +113,7 @@ function showTemp(response) {
 }
 
 function searchBox(city) {
-    
+
     // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
     // let city = "Denver"
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
@@ -122,17 +123,20 @@ function searchBox(city) {
 }
 
 function searchProcess(event) {
-    event.preventDefault()
-    let searchCity = document.querySelector("#searchLocation")
-    console.log(searchCity.value);
+    event.preventDefault();
+    
+    let searchCity = document.querySelector("#search-location")
+    console.log(searchCity.value)
+    searchCity(searchCity.value);
 }
 
-searchBox("Denver");
+
+searchBox("Denver")
+
 ///
 
 let form = document.querySelector("#searching")
 form.addEventListener("submit", searchProcess)
-
 
 /// 
 
