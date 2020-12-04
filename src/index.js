@@ -81,6 +81,9 @@ function search(city) {
     
     axios.get(apiUrl).then(showTemp);
     
+    apiUrl = `https://api.openweathermap.org/data/2.5/onecall?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+
+    axios.get(apiUrl).then(showTemp);
 }
 
 function searchProcess(event) {
