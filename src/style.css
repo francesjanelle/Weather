@@ -70,15 +70,15 @@ ul {
   border-bottom: 1px solid #575757;
 }
 
-span {
-  color: #000000;
+.frances {
+  color: lightgrey;
   margin: 10px;
 }
 
-span a {
+.frances a {
   color: lightgrey;
 }
 
-span a:hover {
+.frances a:hover {
   color: magenta;
 }

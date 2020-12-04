@@ -111,11 +111,28 @@ function showTemp(response) {
     icon.setAttribute("alt", response.data.weather[0].description);
 }
 
-// const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
-let city = "Denver"
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+function searchBox(city) {
+    
+    // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
+    // let city = "Denver"
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+    
+    axios.get(apiUrl).then(showTemp);
+    
+}
 
-axios.get(apiUrl).then(showTemp);
+function searchProcess(event) {
+    event.preventDefault()
+    let searchCity = document.querySelector("#searchLocation")
+    console.log(searchCity.value);
+}
+
+searchBox("Denver");
+///
+
+let form = document.querySelector("#searching")
+form.addEventListener("submit", searchProcess)
+
 
 /// 
 
