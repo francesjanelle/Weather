@@ -32,6 +32,16 @@ body:first-letter {
   float: left;
 }
 
+.active {
+  color: #000000;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
 hr {
   margin-left: 5px;
   margin-right: 5px;
@@ -60,6 +70,7 @@ ul {
 
 #searching {
   float: left;
+  text-align: left;
 }
 .btmContainer {
   text-align: center;

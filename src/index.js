@@ -92,8 +92,6 @@ function searchProcess(event) {
     
 }
 
-
-
 ///
 
 let celsiusTemp = null;
@@ -106,7 +104,10 @@ form.addEventListener("submit", searchProcess)
 function nowCelsius(event) {
     event.preventDefault();
     // (32°F − 32) * 5/9 = 0°C
-    
+
+    celsiusIcon.classList.add("active")
+    fahrenIcon.classList.remove("active")
+
     let celTemp = document.querySelector("#nowTemp")
     celTemp.innerHTML = `${Math.round(celsiusTemp)}°C`;
 }
@@ -118,6 +119,9 @@ function nowFahren(event) {
     event.preventDefault();
     // (0°C * 9/5) + 32 = 32°F
     
+    celsiusIcon.classList.remove("active")
+    fahrenIcon.classList.add("active")
+
     let fahrTemp = document.querySelector("#nowTemp")
     let fahrValue = (celsiusTemp * (9/5)) + 32
     fahrTemp.innerHTML = `${Math.round(fahrValue)}°F`;
