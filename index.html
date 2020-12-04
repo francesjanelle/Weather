@@ -19,38 +19,11 @@
         <div id="weatherInfo">
             <div class="row">
               <div class="col"> <!--start of 1st col-->
-                <img src="img/cloud.png" alt="cloud" width="50">
+                <img src=""
+                alt="" 
+                id="icon">
                   <h2 id="nowTemp"></h2>
                 <h5 id="description"></h5>
-                <form id="searching" >
-                  <input 
-                  type="text"
-                  placeholder="Location"
-                  autocomplete="off" 
-                  id="searchLocation"/>
-                    <small> 
-                      <a 
-                        href="celsius" 
-                        id="celsius"> °C </a> | 
-                      <a 
-                        href="fahrenheit" 
-                        id="fahrenheit"> °F
-                      </a>
-                    </small>  
-                    <br>
-                    <button 
-                      class="btn btn-primary" 
-                      type="submit" 
-                      id="blueSearch">
-                        Search
-                    </button>
-                    <button 
-                      type="button" 
-                      class="btn btn-success" 
-                      id="greenLocation">
-                        Current Location
-                    </button>
-                </form>
               </div> <!--end of 1st col-->
               <div class="col"> <!--start of 2md col--> 
                 <ul class="list">
@@ -58,9 +31,40 @@
                   <li>🌪 Wind: <span id="wind"></span></li>
                 </ul>
               </div> <!--end of 2nd col-->
+             <!-- <div class="col"> <!--start of 3rd col-->
+                        <form id="searching" >
+                          <input 
+                          type="text"
+                          placeholder="Location"
+                          autocomplete="off" 
+                          id="searchLocation"/>
+                            <small> 
+                              <a 
+                                href="celsius" 
+                                id="celsius"> °C </a> | 
+                              <a 
+                                href="fahrenheit" 
+                                id="fahrenheit"> °F
+                              </a>
+                            </small>  
+                            <br>
+                            <button 
+                              class="btn btn-primary" 
+                              type="submit" 
+                              id="blueSearch">
+                                Search
+                            </button>
+                            <button 
+                              type="button" 
+                              class="btn btn-success" 
+                              id="greenLocation">
+                                Current Location
+                            </button>
+                        </form>
+                    <!--    </div> <!--end of 3rd col-->
             </div>
-        </div> <!--end of div #weatherInfo-->
-      </div> <!--.topContainer-->
+          </div> <!--end of div #weatherInfo-->
+        </div> <!--.topContainer-->
       <hr>
       <div class="btmContainer">
         <div id="weeklyFore">

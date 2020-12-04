@@ -29,6 +29,7 @@ body:first-letter {
 #searchLocation {
   margin: 5px;
   width: 215px;
+  float: left;
 }
 
 hr {
@@ -55,6 +56,10 @@ ul {
 
 #wind {
   color: #000000;
+}
+
+#searching {
+  float: left;
 }
 .btmContainer {
   text-align: center;

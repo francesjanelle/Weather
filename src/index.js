@@ -99,12 +99,15 @@ function showTemp(response) {
     let humidity = document.querySelector("#humid")
     let wind = document.querySelector("#wind")
     let nowDate = document.querySelector(".now")
+    let icon = document.querySelector("#icon")
+
     temperature.innerHTML = Math.round(response.data.main.temp);
     searchCity.innerHTML = response.data.name;
     description.innerHTML = response.data.weather[0].description; 
     humidity.innerHTML = response.data.main.humidity + "%";
     wind.innerHTML = Math.round(response.data.wind.speed) + " Km/h";
     nowDate.innerHTML = formatDate(response.data.dt * 1000);
+    icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
 }
 
 // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
@@ -112,7 +115,6 @@ let city = "Denver"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
 
 axios.get(apiUrl).then(showTemp);
-
 
 /// 
 
