@@ -83,9 +83,9 @@ function search(city) {
     
     axios.get(apiUrl).then(showTemp);
     
-}
+// }
 
-function forecastWeather(city) {
+// function forecastWeather(city) {
     apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
 
     axios.get(apiUrl).then(showTemp);
@@ -104,9 +104,6 @@ function searchProcess(event) {
 
 function currentLocation(position) { 
     
-    // Problem here
-    /*uncaught TypeError: Cannot read property 'latitude' of undefined
-    at HTMLButtonElement.currentLocation (index.js:100) */
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
