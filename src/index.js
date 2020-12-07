@@ -54,7 +54,6 @@ function formatDate(timestamp) {
 function showTemp(response) { 
     
     console.log(response.data);
-    console.log(response.data);
     let temperature = document.querySelector("#nowTemp")
     let searchCity = document.querySelector("#city")
     let description = document.querySelector("#description")
@@ -75,23 +74,20 @@ function showTemp(response) {
     icon.setAttribute("alt", response.data.weather[0].description);
 }
 
-function search(city) {
-    
-    // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
-    // let city = "Denver"
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
-    
-    axios.get(apiUrl).then(showTemp);
-    
-// }
+function forecastWeather(response) {
+   console.log(response.data)
 
-// function forecastWeather(city) {
-    apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+    function search(city) {
+    
+        // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
+        // let city = "Denver"
 
-    axios.get(apiUrl).then(showTemp);
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+        axios.get(apiUrl).then(showTemp);
 
-    console.log(apiUrl)
-}    
+        apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+        axios.get(apiUrl).then(forecastWeather);
+    }
 
 function searchProcess(event) {
     event.preventDefault();
@@ -158,46 +154,3 @@ let fahrenIcon = document.querySelector("#fahrenheit")
 fahrenIcon.addEventListener("click", nowFahren)
 
 search("Denver")
-
-
-// Date Beginning
-
-/*let currentDay = new Date();
-
-let currentDate = currentDay.getDate();
-
-let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-]
-
-let today = days[currentDay.getDay()];
-
-let year = currentDay.getFullYear();
-
-let months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "June",
-    "July",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec"
-]
-
-let month = months[currentDay.getMonth()];
-
-let now = document.querySelector(".now")
-    now.innerHTML = `${today}, ${month} ${currentDate}, ${year}` */
-
-///
