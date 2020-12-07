@@ -75,9 +75,10 @@ function showTemp(response) {
 }
 
 function forecastWeather(response) {
-   console.log(response.data)
+    console.log(response.data)
+}
 
-    function search(city) {
+function search(city) {
     
         // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
         // let city = "Denver"
