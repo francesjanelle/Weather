@@ -88,7 +88,7 @@ function forecastWeather(response) {
     forecastElement.innerHTML += `
             <div class="col">
               <h4>${formatHours(forecast.dt * 1000)}</h4>
-              <h5>
+              </h5>
               <img src="img/greenarrow.png" alt="green arrow" width="20px"> <span class="nowTemp">${Math.round(forecast.main.temp_max)}</span><span class="degree">°</span> /
               <img src="img/redarrow.png" alt="red arrow" width="20px"> <span class="nowTemp">${Math.round(forecast.main.temp_min)}</span>° <br>
               </h5>
