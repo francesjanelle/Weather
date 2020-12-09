@@ -56,9 +56,10 @@ function formatHours(timestamp) {
     return `${hour}:${minute}`
 }
 
-function showTemp(response) { 
-    
-//    console.log(response.data);
+///
+
+function showTemp(response) {
+    //console.log(response.data);
     let temperature = document.querySelector(".nowTemp")
     let searchCity = document.querySelector("#city")
     let description = document.querySelector("#description")
@@ -95,21 +96,17 @@ function forecastWeather(response) {
               <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
               <h6>${forecast.weather[0].description}</h6>
               </div>`
-}    
-//    console.log(response.data)
-//    console.log(response.data.list[0]);
+    } 
 }
 
 function search(city) {
-    
-        // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
-        // let city = "Denver"
 
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
-        axios.get(apiUrl).then(showTemp);
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+    axios.get(apiUrl).then(showTemp);
 
-        apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
-        axios.get(apiUrl).then(forecastWeather);
+    apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+    axios.get(apiUrl).then(forecastWeather);
+
     }
 
 function searchProcess(event) {
@@ -117,8 +114,6 @@ function searchProcess(event) {
     
     let searchCity = document.querySelector("#search-location")
     search(searchCity.value);
-    // console.log(searchCity.value)
-    
 }
 
 function currentLocation(position) { 
