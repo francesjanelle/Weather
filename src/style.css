@@ -28,6 +28,7 @@ body {
   margin: 5px;
   width: 215px;
   float: left;
+  background-color: #ffffff;
 }
 
 .active {
