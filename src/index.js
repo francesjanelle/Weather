@@ -59,7 +59,7 @@ function formatHours(timestamp) {
 function showTemp(response) { 
     
     console.log(response.data);
-    let temperature = document.querySelector("#nowTemp")
+    let temperature = document.querySelector(".nowTemp")
     let searchCity = document.querySelector("#city")
     let description = document.querySelector("#description")
     let humidity = document.querySelector("#humid")
@@ -81,19 +81,18 @@ function showTemp(response) {
 
 function forecastWeather(response) {
     let forecastElement = document.querySelector("#weeklyFore");
+    forecastElement.innerHTML = null;
     let forecast = null;
     for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index]
     forecastElement.innerHTML += `
-    <div class="row">
-            <div class="col">
               <h4>${formatHours(forecast.dt * 1000)}</h4>
-              <img src="img/greenarrow.png" alt="green arrow" width="20px"> <span class="highTemp">${Math.round(forecast.main.temp_max)}</span><span class="degree">°</span> /
-              <img src="img/redarrow.png" alt="red arrow" width="20px"> <span class="lowTemp">${Math.round(forecast.main.temp_min)} </span>° <br>
+              <img src="img/greenarrow.png" alt="green arrow" width="20px"> <span class="nowTemp">${Math.round(forecast.main.temp_max)}</span><span class="degree">°</span> /
+              <img src="img/redarrow.png" alt="red arrow" width="20px"> <span class="nowTemp">${Math.round(forecast.main.temp_min)} </span>° <br>
               </h5>
               <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
               <h6>${forecast.weather[0].description}</h6>
-            </div> `
+            `
 }    
 
 
@@ -156,7 +155,7 @@ function nowCelsius(event) {
     celsiusIcon.classList.add("active")
     fahrenIcon.classList.remove("active")
 
-    let celTemp = document.querySelector("#nowTemp")
+    let celTemp = document.querySelector(".nowTemp")
     celTemp.innerHTML = `${Math.round(celsiusTemp)}°C`;
 }
 
@@ -170,7 +169,7 @@ function nowFahren(event) {
     celsiusIcon.classList.remove("active")
     fahrenIcon.classList.add("active")
 
-    let fahrTemp = document.querySelector("#nowTemp")
+    let fahrTemp = document.querySelector(".nowTemp")
     let fahrValue = (celsiusTemp * (9/5)) + 32
     fahrTemp.innerHTML = `${Math.round(fahrValue)}°F`;
 }
