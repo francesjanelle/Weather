@@ -1,3 +1,5 @@
+
+
 body {
   max-width: 950px;
   margin: 10px auto;
@@ -69,15 +71,14 @@ ul {
   color: #000000;
 }
 
-
 #searching {
   float: left;
   text-align: left;
 }
 
 .btmContainer {
-  text-align: center;
   margin: 10px;
+  text-align: center;
 }
 
 .frances {
@@ -95,8 +96,4 @@ ul {
 
 #description {
   text-transform: capitalize;
-}
-
-.btmContainer h5 {
-  text-align: center;
 }
