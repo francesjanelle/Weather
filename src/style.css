@@ -1,5 +1,5 @@
 body {
-  max-width: 800px;
+  max-width: 950px;
   margin: 10px auto;
   padding: 0 auto;
   color: #000000;
@@ -74,6 +74,7 @@ ul {
   float: left;
   text-align: left;
 }
+
 .btmContainer {
   text-align: center;
   margin: 10px;
@@ -94,4 +95,8 @@ ul {
 
 #description {
   text-transform: capitalize;
+}
+
+.btmContainer h5 {
+  text-align: center;
 }
