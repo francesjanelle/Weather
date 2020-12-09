@@ -2,17 +2,6 @@
 function formatDate(timestamp) { 
     let dateNow = new Date(timestamp)
 
-    let hour = dateNow.getHours();
-    
-    if (hour < 10) { 
-        hour = `0${hour}`
-    }
-    
-    let minute = dateNow.getMinutes();
-    
-    if (minute < 10) { 
-        minute = `0${minute}`
-    }
     
     /* let days = [
         "Sunday",
@@ -48,7 +37,23 @@ function formatDate(timestamp) {
         date = `0${date}`
     }
     
-    return `${month} ${date}, ${hour}:${minute}`
+    return `${month} ${date}, ${formatHours(timestamp)}`
+}
+
+function formatHours(timestamp) {
+    let dateNow = new Date(timestamp)
+    let hour = dateNow.getHours();
+    
+    if (hour < 10) { 
+        hour = `0${hour}`
+    }
+    
+    let minute = dateNow.getMinutes();
+    
+    if (minute < 10) { 
+        minute = `0${minute}`
+    }
+    return `${hour}:${minute}`
 }
 
 function showTemp(response) { 
