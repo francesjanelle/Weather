@@ -80,7 +80,26 @@ function showTemp(response) {
 }
 
 function forecastWeather(response) {
+    let forecastElement = document.querySelector("#weeklyFore");
+    let forecast = null;
+    for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index]
+    forecastElement.innerHTML += `
+    <div class="row">
+            <div class="col">
+              <h4>${formatHours(forecast.dt * 1000)}</h4>
+              <img src="img/greenarrow.png" alt="green arrow" width="20px"> <span class="highTemp">${Math.round(forecast.main.temp_max)}</span><span class="degree">°</span> /
+              <img src="img/redarrow.png" alt="red arrow" width="20px"> <span class="lowTemp">${Math.round(forecast.main.temp_min)} </span>° <br>
+              </h5>
+              <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
+              <h6>${forecast.weather[0].description}</h6>
+            </div> `
+}    
+
+
+
     console.log(response.data)
+    console.log(response.data.list[0]);
 }
 
 function search(city) {

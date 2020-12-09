@@ -1,0 +1,39 @@
+          <div class="row">
+            <div class="col">
+              <h4>Wed</h4>
+              <img src="img/greenarrow.png" alt="green arrow" width="20px"> <span class="highTemp">20</span><span class="degree">°</span> /
+              <img src="img/redarrow.png" alt="red arrow" width="20px"> <span class="lowTemp"> 15</span>° <br>
+              </h5>
+              
+              <h6 class="foreDes">Broken clouds</h6>
+            </div>
+            <div class="col">
+              <h4>Thu</h4>
+              <h5>
+                <img src="img/greenarrow.png" alt="green arrow" width="20px"> <span class="highTemp">20</span><span class="degree">°</span> /
+                <img src="img/redarrow.png" alt="red arrow" width="20px"> <span class="lowTemp"> 15</span>°
+              </h5>
+            </div>
+            <div class="col">
+              <h4>Fri</h4>
+              <h5>
+              <img src="img/greenarrow.png" alt="green arrow" width="20px"> <span class="highTemp">20</span><span class="degree">°</span> /
+              <img src="img/redarrow.png" alt="red arrow" width="20px"> <span class="lowTemp"> 15</span>°
+              </h5>
+            </div>
+            <div class="col">
+              <h4>Sat</h4>
+              <h5>
+              <img src="img/greenarrow.png" alt="green arrow" width="20px"> <span class="highTemp">20</span><span class="degree">°</span> /
+              <img src="img/redarrow.png" alt="red arrow" width="20px"> <span class="lowTemp"> 15</span>°
+              </h5>
+            </div>
+            <div class="col">
+              <h4>Sun</h4>
+              <h5>
+              <img src="img/greenarrow.png" alt="green arrow" width="20px"> <span class="highTemp">20</span><span class="degree">°</span> /
+              <img src="img/redarrow.png" alt="red arrow" width="20px">  <span class="lowTemp"> 15</span>°
+              </h5>
+            </div>
+          </div>
+          <!--end of .row-->
