@@ -53,3 +53,16 @@ function search(city) {
     }
 
  // const apiKey = "deb4d0036edfa966c7a36750fd024ceb";
+
+ me trying to figure out how to change colors by time
+
+ .daytime {
+  background: linear-gradient(#ffffff, aliceblue);
+}
+
+.nightime {
+  background: linear-gradient(darkblue, blue);
+ 
+}
+
+gonna need to figure out hot to change celsius to fahrenheit
