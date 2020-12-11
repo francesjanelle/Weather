@@ -106,6 +106,9 @@ function search(city) {
     apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
     axios.get(apiUrl).then(forecastWeather);
 
+    apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=deb4d0036edfa966c7a36750fd024ceb&units=metric`
+    axios.get(apiUrl).then(forecastWeather);
+
     }
 
 function searchProcess(event) {
