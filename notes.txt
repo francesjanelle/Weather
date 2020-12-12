@@ -62,7 +62,26 @@ function search(city) {
 
 .nightime {
   background: linear-gradient(darkblue, blue);
+
+
  
 }
+
+function updateBack(event) { 
+    event.preventDefault();
+
+    let hour = new Date().getHours();
+
+    if (hour < 10) {
+        document.getElementById("mainContainer").style.backgroundColor = "lightblue"
+    } else if (hour < 18) {
+        document.getElementById("mainContainer").style.backgroundColor = "#4287f5"
+    } else (hour <= 24) { 
+        document.getElementById("mainContainer").style.backgroundColor = "#5700c2"
+    }
+    
+
+}
+
 
 gonna need to figure out hot to change celsius to fahrenheit

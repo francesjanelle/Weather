@@ -1,5 +1,3 @@
-
-
 function formatDate(timestamp) { 
     let dateNow = new Date(timestamp)
 
