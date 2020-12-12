@@ -42,7 +42,7 @@ function formatHours(timestamp) {
     let dateNow = new Date(timestamp)
     let hour = dateNow.getHours();
     
-    if (hour < 10) { 
+    if (hour < 10) {
         hour = `0${hour}`
     }
     

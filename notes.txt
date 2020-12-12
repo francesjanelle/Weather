@@ -82,6 +82,11 @@ function updateBack(event) {
     
 
 }
+ if (hour <= 12) {
+        hour = document.getElementById("mainContainer").style.backgroundColor = "lightblue";
+    } else { 
+        hour = document.getElementById("mainContainer").style.baackgroundColor = "blue"
+    }
 
 
 gonna need to figure out hot to change celsius to fahrenheit
