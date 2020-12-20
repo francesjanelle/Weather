@@ -34,8 +34,10 @@ function formatDate(timestamp) {
     if (date < 10) { 
         date = `0${date}`
     }
+
+    let year = dateNow.getFullYear()
     
-    return `${month} ${date}, ${formatHours(timestamp)}`
+    return `${month} ${date}, ${year} ${formatHours(timestamp)}`
 }
 
 function formatHours(timestamp) {
@@ -51,6 +53,7 @@ function formatHours(timestamp) {
     if (minute < 10) { 
         minute = `0${minute}`
     }
+
     return `${hour}:${minute}`
 }
 
