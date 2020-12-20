@@ -60,7 +60,7 @@ function formatHours(timestamp) {
 ///
 
 function showTemp(response) {
-    console.log(response.data);
+//    console.log(response.data);
     let temperature = document.querySelector(".nowTemp")
     let searchCity = document.querySelector("#city")
     let description = document.querySelector("#description")
